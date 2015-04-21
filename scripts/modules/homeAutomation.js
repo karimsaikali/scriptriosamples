@@ -3,7 +3,12 @@
 write=nobody
 execute=anonymous 
   **/ 
- function HomeAutomationManager() {
+ 
+/**
+ * @class HomeAutomationManager
+ * @constructor HomeAutomationManager
+ */
+function HomeAutomationManager() {
   this.rooms = [
     {"master": {"temperature": 22, "light": false}}, 
     {"kids": {"temperature": 22, "light": false}}, 
@@ -14,4 +19,4 @@ execute=anonymous
 
 HomeAutomationManager.prototype.getReport = function() {
   return "Rooms: " + "\n" +  JSON.stringify(this.rooms) + "\nDoors:\n" + JSON.stringify(this.doors);
-}   							
+}   				   							
